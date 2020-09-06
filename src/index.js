@@ -2,11 +2,9 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const http = require('http');
-const multer = require('multer');
 const socketio = require('socket.io');
 const Filter = require('bad-words');
 const siofu = require("socketio-file-upload");
-const post = require('./routes/post');
 
 const {generateMessages} = require('./utils/messages');
 const {addUser, removeUser, getUser, getUsersInRoom} = require('./utils/users');
@@ -21,7 +19,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,'../public')));
 app.use(siofu.router);
-app.use(post);
 
 io.on('connection',(socket) => {
     console.log('New WebSocket connection..');
