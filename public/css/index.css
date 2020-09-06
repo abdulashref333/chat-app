@@ -1,0 +1,22 @@
+body {
+    background-color:#4A235A ;
+}
+h1{
+    text-align: center;
+    color: #8E44AD;
+}
+.container {
+    padding-top: 200px;
+}
+.form-main-container {
+    background-color: mintcream;
+    border:solid 1px;
+}
+.form-content {
+    text-align: center;
+    padding-left: 120px;
+}
+.submit {
+    padding-left: 165px;
+    padding-bottom: 15px;
+}
